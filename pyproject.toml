@@ -1,0 +1,26 @@
+[project]
+name = "manual-qa-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "byaldi>=0.0.5",
+    "torch==2.4.0+cu121",
+    "hatchling",
+    "editables",
+    "wheel",
+    "setuptools",
+    "flash-attn>=2.6.3",
+    "accelerate>=1.0.1",
+    "qwen-vl-utils[decord]>=0.0.8",
+    "torchvision>=0.19.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+extra-index-url = ["https://download.pytorch.org/whl/cu121/"]
+
