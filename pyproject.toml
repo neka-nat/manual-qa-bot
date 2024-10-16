@@ -15,6 +15,7 @@ dependencies = [
     "accelerate>=1.0.1",
     "qwen-vl-utils[decord]>=0.0.8",
     "torchvision>=0.19.0",
+    "streamlit>=1.39.0",
 ]
 
 [build-system]

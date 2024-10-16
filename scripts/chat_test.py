@@ -8,7 +8,7 @@ from manual_qa_bot.chat import ChatModel
 
 def rag_search(query: str):
     rag = IndexManager().create_index("test")
-    results = rag.search(query, k=3)
+    results = rag.search(query, k=1)
     return results
 
 
