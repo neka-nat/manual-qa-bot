@@ -20,7 +20,6 @@ def app():
     if st.button("Create Index"):
         with st.spinner("Creating index..."):
             st.session_state.rag = IndexManager().create_index(rag_index_name, rag_data_dir)
-            st.session_state.page_images = convert_from_path("data/sh081933c.pdf", dpi=200)
         st.success("Index created successfully")
 
     if st.session_state.rag is not None:
@@ -40,6 +39,7 @@ def app():
             st.session_state.messages.append({"role": "user", "content": prompt})
             messages_container.chat_message("user").markdown(prompt)
             rag_results = rag.search(prompt, k=1)
+            page_images = convert_from_path(rag_results[0]["metadata"]["file_path"], dpi=200)
             target_image: Image.Image = page_images[rag_results[0]["page_num"] - 1]
             messages = [
                 {

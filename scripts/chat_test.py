@@ -14,8 +14,7 @@ def rag_search(query: str):
 
 query = "インクルードファイルの設定について教えて。"
 results = rag_search(query)
-
-page_images = convert_from_path("data/sh081933c.pdf", dpi=200)
+page_images = convert_from_path(results[0]["metadata"]["file_path"], dpi=200)
 target_image: Image.Image = page_images[results[0]["page_num"] - 1]
 
 messages = [
