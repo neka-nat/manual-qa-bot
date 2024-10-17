@@ -18,3 +18,15 @@ uv run pip install git+https://github.com/huggingface/transformers@21fac7abba2a3
 ```bash
 uv run streamlit run scripts/run_app.py
 ```
+
+## Demo
+
+データのダウンロード
+
+```bash
+mkdir data
+cd data
+wget https://info.gbiz.go.jp/about/document/HowTo.pdf
+```
+
+![demo](./assets/demo.gif)
