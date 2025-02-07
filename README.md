@@ -9,8 +9,9 @@
 ## Installation
 
 ```bash
-uv install
-uv run pip install git+https://github.com/huggingface/transformers@21fac7abba2a37fae86106f87fcf9974fd1e3830
+git clone https://github.com/neka-nat/manual-qa-bot.git
+cd manual-qa-bot
+uv sync
 ```
 
 ## Run

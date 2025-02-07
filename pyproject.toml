@@ -16,6 +16,7 @@ dependencies = [
     "qwen-vl-utils[decord]>=0.0.8",
     "torchvision>=0.19.0",
     "streamlit>=1.39.0",
+    "transformers",
 ]
 
 [build-system]
@@ -24,4 +25,7 @@ build-backend = "hatchling.build"
 
 [tool.uv]
 extra-index-url = ["https://download.pytorch.org/whl/cu121/"]
+
+[tool.uv.sources]
+transformers = { git = "https://github.com/huggingface/transformers" }
 

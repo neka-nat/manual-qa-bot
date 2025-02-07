@@ -1,12 +1,12 @@
 from typing import Any
 
 from PIL import Image
-from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
+from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 
 
 class ChatModel:
-    def __init__(self, model_name: str = "Qwen/Qwen2-VL-2B-Instruct"):
-        self.model = Qwen2VLForConditionalGeneration.from_pretrained(
+    def __init__(self, model_name: str = "Qwen/Qwen2.5-VL-3B-Instruct"):
+        self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
             model_name, torch_dtype="auto", device_map="auto",
             attn_implementation="flash_attention_2",
         )
